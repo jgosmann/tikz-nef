@@ -5,6 +5,19 @@ The *nef* TikZ library provides predefined styles and shapes to create diagrams
 
 ![Gated difference integrator example.](https://raw.githubusercontent.com/jgosmann/tikz-nef/master/example-net.png)
 
+The example above was generated with this code:
+
+```latex
+\begin{tikzpicture}[nef]
+    \graph {
+        input [ext] -> gate [ens] -> integrator/$x$ [ens] -> output [ext];
+        integrator -> [bend right, "-1"] gate;
+        integrator -> [recurrent] integrator;
+        store -> [inhibit] gate;
+    };
+\end{tikzpicture}
+```
+
 The following styles are supported:
 
 * ea: ensemble array
