@@ -3,6 +3,8 @@ The *nef* TikZ library provides predefined styles and shapes to create diagrams
  for neural networks constructed with the methods of the Neural Engineering
  Framework (NEF) [1].
 
+![Gated difference integrator example.](https://raw.githubusercontent.com/jgosmann/tikz-nef/master/example-net.png)
+
 The following styles are supported:
 
 * ea: ensemble array
