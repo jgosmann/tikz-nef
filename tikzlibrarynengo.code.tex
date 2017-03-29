@@ -1,0 +1,37 @@
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{shadows}
+\usetikzlibrary{shapes.geometric}
+
+\pgfdeclareshape{rectification}{
+    \inheritsavedanchors[from=circle]
+    \inheritanchorborder[from=circle]
+    \inheritanchor[from=circle]{center}
+    \inheritanchor[from=circle]{north}
+    \inheritanchor[from=circle]{south}
+    \inheritanchor[from=circle]{west}
+    \inheritanchor[from=circle]{east}
+    \backgroundpath{
+        \pgfsetarrows{-}
+        \pgfpathcircle{\pgfpoint{0}{0}}{\radius} \pgfusepath{stroke,clip}
+        \pgfpathmoveto{\pgfpoint{-\radius}{-0.25 * \radius}}
+        \pgfpathlineto{\pgfpoint{0}{-0.25 * \radius}}
+        \pgfpathlineto{\pgfpoint{\radius}{\radius - 0.25 * \radius}}
+    }
+}
+
+\tikzset{
+    nengo/.style={
+        minimum width=1.5em, minimum height=1.5em,
+        every path/.style={-Latex},
+        graphs/every graph/.style={grow right sep=15mm, branch down sep=15mm, nodes={anchor=center}, edge quotes={above, node font=\footnotesize}},
+    },
+    ext/.style={draw=none},
+    net/.style={draw, rounded corners=0.5em},
+    ens/.style={draw, circle, inner sep=0.25ex},
+    rect/.style={draw, shape=rectification, inner sep=0.25ex},
+    state/.style={draw, fill=white, circle, inner sep=0.05em, double copy shadow={opacity=0.6, shadow yshift=-0.3ex, shadow xshift=0.3ex}},
+    recurrent/.style={loop above, min distance=2em, in=120, out=60},
+    inhibit/.style={-Circle}
+}
+
+\endinput
