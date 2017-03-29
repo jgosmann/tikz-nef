@@ -94,7 +94,7 @@ Use this style for recurrent connections. It will add a loop above an ensemble o
     \begin{tikzpicture}[nef]
         \graph {
             input [ext] -> gate [ens] -> integrator/$x$ [ens] -> output [ext];
-            integrator -> [bend right, "-1"] gate;
+            integrator -> [bend right, "$-1$"] gate;
             integrator -> [recurrent] integrator;
             store -> [inhibit] gate;
         };
@@ -112,7 +112,7 @@ Use this style for recurrent connections. It will add a loop above an ensemble o
 \begin{tikzpicture}[nef]
     \graph {
         input [ext] -> gate [ens] -> integrator/$x$ [ens] -> output [ext];
-        integrator -> [bend right, "-1"] gate;
+        integrator -> [bend right, "$-1$"] gate;
         integrator -> [recurrent] integrator;
         store -> [inhibit] gate;
     };

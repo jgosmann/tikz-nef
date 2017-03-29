@@ -11,7 +11,7 @@ The example above was generated with this code:
 \begin{tikzpicture}[nef]
     \graph {
         input [ext] -> gate [ens] -> integrator/$x$ [ens] -> output [ext];
-        integrator -> [bend right, "-1"] gate;
+        integrator -> [bend right, "$-1$"] gate;
         integrator -> [recurrent] integrator;
         store -> [inhibit] gate;
     };
