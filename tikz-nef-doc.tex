@@ -46,6 +46,7 @@ This style provides basic general settings like minimum node sizes and arrow tip
             \node {\texttt{ens}}; & \node [nef,ens] {ens}; & \node [right] {ensemble}; \\ 
             \node {\texttt{ext}}; & \node [nef,ext] {ext}; & \node [right] {external inputs and outputs}; \\ 
             \node {\texttt{net}}; & \node [nef,net] {net}; & \node [right] {network}; \\ 
+            \node {\texttt{pnode}}; & \node [nef,pnode] {}; & \node [right] {pass-through node}; \\
             \node {\texttt{rect}}; & \node [nef,rect] {}; & \node [right] {rectification ensemble}; \\ 
         };
     \end{tikzpicture}
@@ -63,6 +64,9 @@ Use this style for inputs and outputs external to the displayed network.
 
 \paragraph{net}
 Use this style for networks.
+
+\paragraph{pnode}
+Use this style for pass-through nodes.
 
 \paragraph{rect}
 Use this style for rectification ensembles (i.e., all encoders are 1).

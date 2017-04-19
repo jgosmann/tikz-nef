@@ -25,6 +25,7 @@ The following styles are supported:
 * ext: external input or output
 * inhibt: inhibitory connection
 * net: network
+* pnode: pass-through node
 * rect: rectification ensemble
 * recurrent: recurrent connection
 
