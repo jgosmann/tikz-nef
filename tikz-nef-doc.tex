@@ -78,6 +78,7 @@ Use this style for rectification ensembles (i.e., all encoders are 1).
         \matrix [row sep=4pt, column sep=4pt] {
             \node {Style}; & & \node [right] {Usage}; \\
             \node {\texttt{inhibit}}; & \draw (-10pt, 0) -- (10pt, 0) [inhibit]; & \node [right] {inhibitory connection}; \\ 
+            \node {\texttt{modulatory}}; & \draw (-10pt, 0) -- (10pt, 0) [modulatory]; & \node [right] {modulatory connection}; \\ 
             \node {\texttt{recurrent}}; & \node (ens) [nef,ens] {}; \path [nef] (ens) edge [nef,recurrent] (ens) ; & \node [right] {recurrent connection}; \\ 
         };
     \end{tikzpicture}
@@ -87,8 +88,12 @@ Use this style for rectification ensembles (i.e., all encoders are 1).
 \paragraph{inhibit}
 Use this style for inhibitory connections.
 
+\paragraph{modulatory}
+Use this style for modulatory connections.
+
 \paragraph{recurrent}
 Use this style for recurrent connections. It will add a loop above an ensemble or network.
+
 
 
 \section{Examples}
